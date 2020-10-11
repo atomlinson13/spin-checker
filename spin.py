@@ -21,14 +21,12 @@ def check_if_schedule_empty():
     driver.find_element_by_id("scheduleNextArrow").click()
     driver.find_element_by_id("scheduleNextArrow").click()
     time.sleep(2)
-    isEmpty = driver.execute_script('return document.getElementsByClassName("wppc-most-recent-val")[1].innerHTML.trim()  === "";')
-    return isEmpty
+    return driver.execute_script('return document.getElementsByClassName("wppc-most-recent-val")[1].innerHTML.trim()  === "";')
 
 url = "https://stridespinstudio.com/schedule/"
 DRIVER_PATH = ''
 driver = webdriver.Chrome(executable_path=DRIVER_PATH)
 driver.get(url)
-
 
 isEmpty = True
 while(isEmpty):
