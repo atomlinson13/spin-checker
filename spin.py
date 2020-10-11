@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import argparse
 import sys
 
@@ -53,7 +55,7 @@ parser.add_argument(
 )
 parser.add_argument(
     "-n",
-    "-- numbers",
+    "--numbers",
     nargs=argparse.REMAINDER,
     dest="send_to",
     help="List of phone numbers to send notifications to."
