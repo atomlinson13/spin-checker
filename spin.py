@@ -23,12 +23,10 @@ def check_if_schedule_empty():
     time.sleep(2)
     return driver.execute_script('return document.getElementsByClassName("wppc-most-recent-val")[1].innerHTML.trim()  === "";')
 
-url = "https://stridespinstudio.com/schedule/"
-DRIVER_PATH = ''
-driver = webdriver.Chrome(executable_path=DRIVER_PATH)
-driver.get(url)
-
+driver = webdriver.Chrome(executable_path='')
+driver.get("https://stridespinstudio.com/schedule/")
 isEmpty = True
+
 while(isEmpty):
 
     isEmpty = check_if_schedule_empty()
